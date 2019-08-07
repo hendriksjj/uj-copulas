@@ -1,0 +1,130 @@
+
+#### MAIN ####
+
+# set options for project
+oldScipen <- getOption("scipen")
+oldw <- getOption("warn")
+
+options(warn = -1)
+options(scipen = 99)
+
+# create finalResults directory 
+dir.create('finalResults', showWarnings = FALSE)
+
+#### Marginal Models ####
+
+# pull in functions needed for marginal model fitting
+source('filteredData.R')
+
+df_full <- read.csv('data//CLEAN_DATA.csv')
+
+# Descriptive Statistics
+descr_stats(df_full[,3:ncol(df_full)])
+
+# Correlation
+corr(df_full)
+
+# Steps before model fit
+indices <- colnames(df_full)[3:ncol(df_full)]
+df_resid <- data.frame(Date = df_full$Date)
+
+spec_save <- data.frame()
+
+# Model fit and residual calculations
+for(index in indices){
+  print("==================================================================================")
+  print(index)
+  print("==================================================================================")
+  y <- df_full[,index]
+  final_spec <- fun_garch_spec(y, p_max = 3, q_max = 3, r_max = 2, s_max = 2)
+  
+  fit <- NULL
+  resid <- NULL
+  attempt <- 0
+  
+  while((is.null(fit) || is.null(resid)) && attempt < nrow(final_spec)){
+    attempt <- attempt + 1
+    spec=ugarchspec(mean.model = list(armaOrder = c(final_spec[attempt,'AR'], final_spec[attempt,'MA']), include.mean = TRUE, archm = FALSE, external.regressors = NULL), variance.model = list(model = final_spec[attempt,'Model'], submodel = if(final_spec[attempt,'SubModel']==0) NULL else final_spec[attempt,'SubModel'], garchOrder = c(final_spec[attempt,'G'], final_spec[attempt,'ARCH'])),distribution.model = final_spec[attempt,'Dist'])
+    
+    
+    fit <- ugarchfit(spec, data=y, solver = final_spec[attempt,'solver'])
+    resid <- fit@fit$residuals
+    # std_resid <- (resid - mean(resid))/sd(resid)
+  }
+  df_resid <- cbind(df_resid, resid)
+  spec_save <- rbind(spec_save,
+                     cbind(index, final_spec[attempt,]))
+}
+
+# Write model output
+model_output(spec_save)
+
+# Write filtered data
+colnames(df_resid) <- c('Date',as.character(spec_save$index))
+write.csv(df_resid, 'FILTERED_DATA.csv')
+
+#### Copula ####
+
+# Pull in functions for copula fitting
+source('copulaFit.R')
+
+
+df_full <- read.csv('data//FILTERED_DATA.csv')
+# for robustness check
+# df_full <- df_full[df_full$X >= 1051,]
+
+colnames(df_full) <- colnames(df_full) %>%
+  stringr::str_replace_all('_', ' ') %>%
+  lapply(FUN = simpleCap) %>%
+  unlist()
+
+indices <- colnames(df_full)[3:17]
+
+df_indices <- df_full[,indices]
+
+df_indices_std <- scale(df_indices)
+
+copdata <- pobs(df_indices_std)
+
+
+df_copula_class <- read.csv('data//copula_class.csv')
+
+rvm <- RVineStructureSelect(copdata,
+                            familyset = df_copula_class$Code,
+                            progress = TRUE)
+
+
+copula_results(copdata, rvm)
+
+
+# Save the rvm object
+# saveRDS(rvm, "rvm.rds")
+
+# Load the rvm object as rvm_loaded
+# rvm_loaded <- readRDS("rvm.rds")
+
+# RVineTreePlot(data=NULL, RVM=rvm, tree=1, edge.labels=c("family","theotau"))
+
+
+# Simulation Parameters
+lower_perc <- 0.01
+upper_perc <- 0.99
+sim_size <- 10000 #10000
+number_of_sims <- 500 # 500
+
+
+
+results <- simu_TDC(rvm, lower_perc, upper_perc, sim_size, number_of_sims)
+
+write.csv(results$aggregated_results,'finalResults//aggregated_results.csv')
+# write.csv(results$raw_simulations,'raw_simulations.csv')
+
+aggregated_results <- read.csv('finalResults//aggregated_results.csv')
+
+df_final <- df_return_from_agg(aggregated_results)
+
+write.csv(df_final, 'finalResults//Tail Dependence.csv')
+
+
+options(warn = oldw)
+options(scipen = oldScipen)
