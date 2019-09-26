@@ -1,37 +1,44 @@
 ## Introduction
 
-You can use the [editor on GitHub](https://github.com/hendriksjj/uj-copulas/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is the code base for my Masters thesis, titled _Sectoral dependence and contagion in the BRICS grouping: an application of the R-vine copulas_. The study provides a contribution to the literature that distinguishes between contagion and interdependence between financial assets by proposing the application of the R-Vine methodology in testing the extent of correlation between the extreme joint distribution of the different markets or economies. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### R and RStudio versions
 
-### Markdown
+Ensure that you have the latest R version installed. The version information for R for this project is:  
+- version.string R version 3.5.1 (2018-07-02)
+- nickname: Feather Spray
+- platform: x86 64-w64-mingw32
+- arch: x86 64 
+- os: mingw32 
+- system: x86_64, mingw32
+- major: 3
+- minor: 5.1
+- year: 2018
+- month: 07
+- day: 02
+- svn rev: 74947
+- language: R
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The RStudio version is Version 1.1.463
 
-```markdown
-Syntax highlighted code block
+### Project setup
 
-# Header 1
-## Header 2
-### Header 3
+A .Rproj file is used for the project setup. From RStudio, go to 'File', 'Open Project...' and open the .proj file accociated with this project. RStudio will open the necessary files.
+If you are not using RStudio but base R instead, set your current working directory to where the main.R file is within the project.
 
-- Bulleted
-- List
+### Library dependencies
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+The libraries that are imported into the project are:
+```r
+library(dplyr)
+library(MTS)
+library(psych)
+library(tseries)
+library(rugarch)
+library(VineCopula)
+library(dplyr)
+library(kdecopula)
 ```
+### Running the project
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hendriksjj/uj-copulas/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Simply run main.R. All the relevant results will be placed into the finalResults folder.
