@@ -5,20 +5,19 @@ This is the code base for my Masters thesis, titled _Sectoral dependence and con
 ### R and RStudio versions
 
 Ensure that you have the latest R version installed. The version information for R for this project is:  
-version.string R version 3.5.1 (2018-07-02)
-nickname: Feather Spray
-platform: x86 64-w64-mingw32
-arch: x86 64 
-os: mingw32 
-system: x86_64, mingw32
-major: 3
-minor: 5.1
-year: 2018
-month: 07
-day: 02
-svn rev: 74947
-language: R
-
+- version.string R version 3.5.1 (2018-07-02)
+- nickname: Feather Spray
+- platform: x86 64-w64-mingw32
+- arch: x86 64 
+- os: mingw32 
+- system: x86_64, mingw32
+- major: 3
+- minor: 5.1
+- year: 2018
+- month: 07
+- day: 02
+- svn rev: 74947
+- language: R
 
 The RStudio version is Version 1.1.463
 
