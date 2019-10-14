@@ -4,16 +4,16 @@
     "created" : 1562756985013.000,
     "dirty" : false,
     "encoding" : "UTF-8",
-    "folds" : "",
+    "folds" : "33|22|56|0|\n",
     "hash" : "1852466089",
     "id" : "3FAC77F3",
-    "lastKnownWriteTime" : 1562757004,
-    "last_content_update" : 1562757004368,
-    "path" : "C:/Users/F5056756/Google Drive/New folder/uj.masters.dissertation.code/main.R",
+    "lastKnownWriteTime" : 1571039619,
+    "last_content_update" : 1571039960276,
+    "path" : "C:/Users/F5056756/Desktop/dissertation/uj-copulas/uj.masters.dissertation.code/main.R",
     "project_path" : "main.R",
     "properties" : {
-        "cursorPosition" : "115,0",
-        "scrollLine" : "104"
+        "cursorPosition" : "120,0",
+        "scrollLine" : "110"
     },
     "relative_order" : 1,
     "source_on_save" : false,

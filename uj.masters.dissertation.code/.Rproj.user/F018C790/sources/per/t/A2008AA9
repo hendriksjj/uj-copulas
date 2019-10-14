@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1571039893849.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "12|26|16|0|\n17|31|32|0|\n",
+    "hash" : "3193564576",
+    "id" : "A2008AA9",
+    "lastKnownWriteTime" : 1571039619,
+    "last_content_update" : 1571039897401,
+    "path" : "C:/Users/F5056756/Desktop/dissertation/uj-copulas/uj.masters.dissertation.code/filteredData.R",
+    "project_path" : "filteredData.R",
+    "properties" : {
+        "cursorPosition" : "71,43",
+        "scrollLine" : "61"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
