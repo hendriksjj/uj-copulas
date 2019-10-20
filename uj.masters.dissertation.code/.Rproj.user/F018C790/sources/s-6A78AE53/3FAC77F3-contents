@@ -27,6 +27,7 @@ corr(df_full)
 # Steps before model fit
 indices <- colnames(df_full)[3:ncol(df_full)]
 df_resid <- data.frame(Date = df_full$Date)
+df_sigma <- data.frame(Date = df_full$Date)
 
 spec_save <- data.frame()
 
@@ -36,10 +37,12 @@ for(index in indices){
   print(index)
   print("==================================================================================")
   y <- df_full[,index]
+  # final_spec <- fun_garch_spec(y, p_max = 1, q_max = 1, r_max = 1, s_max = 1)
   final_spec <- fun_garch_spec(y, p_max = 3, q_max = 3, r_max = 2, s_max = 2)
   
   fit <- NULL
   resid <- NULL
+  sigma <- NULL
   attempt <- 0
   
   while((is.null(fit) || is.null(resid)) && attempt < nrow(final_spec)){
@@ -49,9 +52,11 @@ for(index in indices){
     
     fit <- ugarchfit(spec, data=y, solver = final_spec[attempt,'solver'])
     resid <- fit@fit$residuals
+    sig <- fit@fit$sigma ** 2
     # std_resid <- (resid - mean(resid))/sd(resid)
   }
   df_resid <- cbind(df_resid, resid)
+  df_sigma <- cbind(df_sigma, sig)
   spec_save <- rbind(spec_save,
                      cbind(index, final_spec[attempt,]))
 }
@@ -61,7 +66,9 @@ model_output(spec_save)
 
 # Write filtered data
 colnames(df_resid) <- c('Date',as.character(spec_save$index))
-write.csv(df_resid, 'FILTERED_DATA.csv')
+colnames(df_sigma) <- c('Date',as.character(spec_save$index))
+write.csv(df_sigma, 'FILTERED_DATA.csv')
+write.csv(df_resid, 'FILTERED_DATA_RESID.csv')
 
 #### Copula ####
 
@@ -69,18 +76,18 @@ write.csv(df_resid, 'FILTERED_DATA.csv')
 source('copulaFit.R')
 
 
-df_full <- read.csv('data//FILTERED_DATA.csv')
+df_copula_full <- read.csv('FILTERED_DATA.csv')
 # for robustness check
-# df_full <- df_full[df_full$X >= 1051,]
+# df_copula_full <- df_copula_full[df_copula_full$X >= 1051,]
 
-colnames(df_full) <- colnames(df_full) %>%
+colnames(df_copula_full) <- colnames(df_copula_full) %>%
   stringr::str_replace_all('_', ' ') %>%
   lapply(FUN = simpleCap) %>%
   unlist()
 
-indices <- colnames(df_full)[3:17]
+indices <- colnames(df_copula_full)[3:17]
 
-df_indices <- df_full[,indices]
+df_indices <- df_copula_full[,indices]
 
 df_indices_std <- scale(df_indices)
 

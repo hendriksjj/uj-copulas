@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "81891267",
+    "hash" : "0",
     "id" : "F2CA5CBC",
     "lastKnownWriteTime" : 1571052339,
     "last_content_update" : 1571052339346,
     "path" : "C:/Users/F5056756/Desktop/dissertation/uj-copulas/uj.masters.dissertation.code/copulaFit.R",
     "project_path" : "copulaFit.R",
     "properties" : {
-        "cursorPosition" : "177,0",
-        "scrollLine" : "175"
+        "cursorPosition" : "2,0",
+        "scrollLine" : "0"
     },
     "relative_order" : 3,
     "source_on_save" : false,

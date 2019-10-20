@@ -1,106 +1,106 @@
 "","Indices","copula_family","Param1","Param2"
-"1","Brazil Financials and Brazil Industrials","Gaussian Copula",0.0399012075052501,0
-"2","Brazil Financials and Brazil Resources","Rotated Joe Copula (270 Degrees)",-1.02047635815398,0
+"1","Brazil Financials and Brazil Industrials","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",3.00946223593279,0.384074843409901
+"2","Brazil Financials and Brazil Resources","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",2.43305675276471,0.581574248346638
 "3","Brazil Financials and China Financial","Independence Copula",0,0
-"4","Brazil Financials and China Industrial","Rotated Gumbel Copula (180 Degrees; “survival Gumbel”)",1.01622132597303,0
-"5","Brazil Financials and China Resource","Rotated Tawn Type 2 Copula (90 Degrees)",-2.87646273324377,0.00213864662236746
-"6","Brazil Financials and India Financial","Rotated Tawn Type 2 Copula (180 Degrees)",3.05182344282143,0.00107994195684812
-"7","Brazil Financials and India Industrials","Independence Copula",0,0
-"8","Brazil Financials and India Resources","Independence Copula",0,0
-"9","Brazil Financials and Russia Financial","Independence Copula",0,0
-"10","Brazil Financials and Russia Industrial","Student T Copula (t-copula)",0.00220571843220289,16.1721094006652
-"11","Brazil Financials and Russia Resources","Clayton Copula",0.0511408135686421,0
-"12","Brazil Financials and South Africa Financial","Student T Copula (t-copula)",0.00839272467555159,18.1986957923868
-"13","Brazil Financials and South Africa Industrial","Student T Copula (t-copula)",-0.00771406294685145,13.175590798528
-"14","Brazil Financials and South Africa Resource","Student T Copula (t-copula)",-0.0550208021493669,5.65239985119907
-"15","Brazil Industrials and Brazil Resources","Frank Copula",0.420661039193778,0
-"16","Brazil Industrials and China Financial","Student T Copula (t-copula)",0.0294658133066117,14.6455139875348
-"17","Brazil Industrials and China Industrial","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",1.12858723437301,0.920559589738333
-"18","Brazil Industrials and China Resource","Gaussian Copula",0.0857795991173911,0
-"19","Brazil Industrials and India Financial","Frank Copula",0.652626900138719,0
-"20","Brazil Industrials and India Industrials","Bb1 Copula",0.0817962034823941,1.05115504553176
-"21","Brazil Industrials and India Resources","Rotated Gumbel Copula (180 Degrees; “survival Gumbel”)",1.03895653838968,0
-"22","Brazil Industrials and Russia Financial","Student T Copula (t-copula)",0.00375886331069607,23.4130533082427
-"23","Brazil Industrials and Russia Industrial","Frank Copula",0.178232840320955,0
-"24","Brazil Industrials and Russia Resources","Independence Copula",0,0
-"25","Brazil Industrials and South Africa Financial","Tawn Type 1 Copula",1.23462206492228,0.0420367149684257
-"26","Brazil Industrials and South Africa Industrial","Rotated Tawn Type 1 Copula (180 Degrees)",1.23636736624445,0.307300675582233
-"27","Brazil Industrials and South Africa Resource","Student T Copula (t-copula)",0.377039728111124,8.09706300461559
-"28","Brazil Resources and China Financial","Rotated Tawn Type 1 Copula (180 Degrees)",2.41770809122794,0.0051796690242065
-"29","Brazil Resources and China Industrial","Rotated Joe Copula (270 Degrees)",-1.01304500620694,0
-"30","Brazil Resources and China Resource","Clayton Copula",0.0332167562163205,0
-"31","Brazil Resources and India Financial","Independence Copula",0,0
-"32","Brazil Resources and India Industrials","Independence Copula",0,0
-"33","Brazil Resources and India Resources","Rotated Tawn Type 2 Copula (270 Degrees)",-1.42669849506037,0.00613835204257058
-"34","Brazil Resources and Russia Financial","Tawn Type 1 Copula",1.12875329425183,0.0330030714667617
-"35","Brazil Resources and Russia Industrial","Student T Copula (t-copula)",-0.0298676039989556,21.1384273974178
-"36","Brazil Resources and Russia Resources","Independence Copula",0,0
-"37","Brazil Resources and South Africa Financial","Joe Copula",1.01518555136948,0
-"38","Brazil Resources and South Africa Industrial","Student T Copula (t-copula)",0.0457324874811811,12.7473309323119
-"39","Brazil Resources and South Africa Resource","Student T Copula (t-copula)",0.651043573254655,2.80522744888615
-"40","China Financial and China Industrial","Rotated Joe Copula (90 Degrees)",-1.01750395426454,0
-"41","China Financial and China Resource","Rotated Clayton Copula (90 Degrees)",-0.0287504936910102,0
-"42","China Financial and India Financial","Rotated Tawn Type 2 Copula (270 Degrees)",-3.0321693151999,0.00385222561410587
-"43","China Financial and India Industrials","Student T Copula (t-copula)",0.0405544561798391,30
-"44","China Financial and India Resources","Student T Copula (t-copula)",0.0148952912353813,24.1713786113753
-"45","China Financial and Russia Financial","Student T Copula (t-copula)",0.012876603541739,12.2708785824182
-"46","China Financial and Russia Industrial","Rotated Joe Copula (180 Degrees; “survival Joe”)",1.03329916997826,0
-"47","China Financial and Russia Resources","Bb7 Copula",1.02149970995044,0.0540018746237175
-"48","China Financial and South Africa Financial","Student T Copula (t-copula)",-0.0125930238087845,20.7890767829005
-"49","China Financial and South Africa Industrial","Student T Copula (t-copula)",0.0977562155821604,23.8083367264973
-"50","China Financial and South Africa Resource","Student T Copula (t-copula)",0.751009265891731,3.32367769889859
-"51","China Industrial and China Resource","Frank Copula",-0.145249123487265,0
-"52","China Industrial and India Financial","Rotated Joe Copula (270 Degrees)",-1.02256984459554,0
-"53","China Industrial and India Industrials","Independence Copula",0,0
-"54","China Industrial and India Resources","Rotated Joe Copula (180 Degrees; “survival Joe”)",1.01714167101776,0
-"55","China Industrial and Russia Financial","Rotated Tawn Type 1 Copula (180 Degrees)",1.1171145885817,0.0461147936567316
-"56","China Industrial and Russia Industrial","Independence Copula",0,0
-"57","China Industrial and Russia Resources","Student T Copula (t-copula)",0.0632718771000891,6.50732746580135
-"58","China Industrial and South Africa Financial","Rotated Tawn Type 1 Copula (180 Degrees)",1.90889540090723,0.013580928759441
-"59","China Industrial and South Africa Industrial","Frank Copula",0.972995376555542,0
-"60","China Industrial and South Africa Resource","Rotated Bb7 Copula (180 Degrees; “survival Bb7”)",1.21934132912091,0.291840302040604
-"61","China Resource and India Financial","Independence Copula",0,0
-"62","China Resource and India Industrials","Rotated Gumbel Copula (180 Degrees; “survival Gumbel”)",1.01908804048895,0
-"63","China Resource and India Resources","Student T Copula (t-copula)",-0.00308570355535093,23.5488646294593
-"64","China Resource and Russia Financial","Independence Copula",0,0
-"65","China Resource and Russia Industrial","Clayton Copula",0.0254862448098625,0
-"66","China Resource and Russia Resources","Student T Copula (t-copula)",0.00771873183602091,17.277822168619
-"67","China Resource and South Africa Financial","Independence Copula",0,0
-"68","China Resource and South Africa Industrial","Student T Copula (t-copula)",0.0648356744715608,11.5567546445686
-"69","China Resource and South Africa Resource","Student T Copula (t-copula)",0.256942322980433,2.43008576268843
-"70","India Financial and India Industrials","Rotated Tawn Type 2 Copula (180 Degrees)",1.17014889635427,0.0252251862530665
-"71","India Financial and India Resources","Clayton Copula",0.0435958329929435,0
-"72","India Financial and Russia Financial","Rotated Clayton Copula (180 Degrees; “survival Clayton”)",0.0481276284812925,0
-"73","India Financial and Russia Industrial","Rotated Tawn Type 2 Copula (180 Degrees)",1.14834208492954,0.0801293936404465
-"74","India Financial and Russia Resources","Rotated Joe Copula (180 Degrees; “survival Joe”)",1.02816886455684,0
-"75","India Financial and South Africa Financial","Student T Copula (t-copula)",0.149032563124452,5.23087563159609
-"76","India Financial and South Africa Industrial","Student T Copula (t-copula)",0.130990976483566,11.4813270439358
-"77","India Financial and South Africa Resource","Student T Copula (t-copula)",0.305913134548385,5.5936093966263
-"78","India Industrials and India Resources","Frank Copula",0.412753666722348,0
-"79","India Industrials and Russia Financial","Frank Copula",0.368199929847398,0
-"80","India Industrials and Russia Industrial","Gaussian Copula",0.0784096487242231,0
-"81","India Industrials and Russia Resources","Gaussian Copula",0.0582828283707769,0
-"82","India Industrials and South Africa Financial","Frank Copula",0.666614515428734,0
-"83","India Industrials and South Africa Industrial","Student T Copula (t-copula)",0.121325967152658,12.7069696475909
-"84","India Industrials and South Africa Resource","Student T Copula (t-copula)",0.268774285807554,5.13975982138588
-"85","India Resources and Russia Financial","Gaussian Copula",0.0276909579075861,0
-"86","India Resources and Russia Industrial","Frank Copula",0.181277162656536,0
-"87","India Resources and Russia Resources","Independence Copula",0,0
-"88","India Resources and South Africa Financial","Rotated Gumbel Copula (180 Degrees; “survival Gumbel”)",1.05269469077875,0
-"89","India Resources and South Africa Industrial","Student T Copula (t-copula)",0.0618467472314657,6.83133278813483
-"90","India Resources and South Africa Resource","Student T Copula (t-copula)",0.628530447931354,2.50805239528135
-"91","Russia Financial and Russia Industrial","Gaussian Copula",0.051914551666636,0
-"92","Russia Financial and Russia Resources","Rotated Gumbel Copula (180 Degrees; “survival Gumbel”)",1.02270507369751,0
-"93","Russia Financial and South Africa Financial","Rotated Tawn Type 2 Copula (180 Degrees)",1.14544125811923,0.198623098878428
-"94","Russia Financial and South Africa Industrial","Frank Copula",0.696332231331803,0
-"95","Russia Financial and South Africa Resource","Student T Copula (t-copula)",0.329407748274975,6.58984333291383
-"96","Russia Industrial and Russia Resources","Student T Copula (t-copula)",0.0369227797381053,14.5067093455771
-"97","Russia Industrial and South Africa Financial","Rotated Clayton Copula (180 Degrees; “survival Clayton”)",0.0608826182256792,0
-"98","Russia Industrial and South Africa Industrial","Tawn Type 2 Copula",1.08840672543299,0.24468213545514
-"99","Russia Industrial and South Africa Resource","Student T Copula (t-copula)",0.131778883657027,6.51225822610126
-"100","Russia Resources and South Africa Financial","Frank Copula",0.601405100764523,0
-"101","Russia Resources and South Africa Industrial","Student T Copula (t-copula)",0.105494433042592,14.7919746680438
-"102","Russia Resources and South Africa Resource","Student T Copula (t-copula)",0.474115394604312,2.093608528083
-"103","South Africa Financial and South Africa Industrial","Frank Copula",0.327682504394494,0
-"104","South Africa Financial and South Africa Resource","Student T Copula (t-copula)",0.224262801071753,9.02267871041235
-"105","South Africa Industrial and South Africa Resource","Rotated Bb7 Copula (180 Degrees; “survival Bb7”)",1.21043004050273,0.284662990070968
+"4","Brazil Financials and China Industrial","Tawn Type 1 Copula",1.84548122617106,0.0023061577477034
+"5","Brazil Financials and China Resource","Bb8 Copula",1.60586348258714,0.922342774727181
+"6","Brazil Financials and India Financial","Tawn Type 1 Copula",1.10189090540395,0.0694667619640119
+"7","Brazil Financials and India Industrials","Frank Copula",1.19942653636079,0
+"8","Brazil Financials and India Resources","Rotated Tawn Type 2 Copula (270 Degrees)",-1.38496740622469,0.101402077946672
+"9","Brazil Financials and Russia Financial","Rotated Clayton Copula (270 Degrees)",-0.122622645788171,0
+"10","Brazil Financials and Russia Industrial","Bb8 Copula",3.10916877389611,0.556724542857849
+"11","Brazil Financials and Russia Resources","Rotated Bb8 Copula (270 Degrees)",-1.89323994950094,-0.758576445620729
+"12","Brazil Financials and South Africa Financial","Rotated Bb8 Copula (270 Degrees)",-1.24044931330684,-0.960900692639409
+"13","Brazil Financials and South Africa Industrial","Rotated Tawn Type 2 Copula (270 Degrees)",-3.84907350319108,0.0031351864216408
+"14","Brazil Financials and South Africa Resource","Bb8 Copula",1.62295238778919,0.990234418496951
+"15","Brazil Industrials and Brazil Resources","Rotated Tawn Type 2 Copula (270 Degrees)",-1.31015262526995,0.187764063375331
+"16","Brazil Industrials and China Financial","Rotated Clayton Copula (180 Degrees; “survival Clayton”)",0.104631561988472,0
+"17","Brazil Industrials and China Industrial","Rotated Bb8 Copula (90 Degrees)",-1.12138698518735,-0.930258991919797
+"18","Brazil Industrials and China Resource","Rotated Tawn Type 1 Copula (90 Degrees)",-1.31380245361447,0.0598449485157893
+"19","Brazil Industrials and India Financial","Tawn Type 2 Copula",1.42220128052754,0.055962334271997
+"20","Brazil Industrials and India Industrials","Rotated Bb8 Copula (270 Degrees)",-1.31572913976769,-0.777026010192826
+"21","Brazil Industrials and India Resources","Rotated Bb8 Copula (90 Degrees)",-1.25921704493799,-0.960230050562498
+"22","Brazil Industrials and Russia Financial","Rotated Tawn Type 2 Copula (90 Degrees)",-2.26098654552383,0.0120523732226593
+"23","Brazil Industrials and Russia Industrial","Student T Copula (t-copula)",-0.0516762443760064,10.8311436731324
+"24","Brazil Industrials and Russia Resources","Student T Copula (t-copula)",-0.00881639471117097,14.8672499023512
+"25","Brazil Industrials and South Africa Financial","Rotated Tawn Type 2 Copula (270 Degrees)",-1.23205443547188,0.0590250639675772
+"26","Brazil Industrials and South Africa Industrial","Rotated Tawn Type 1 Copula (180 Degrees)",1.30247193734322,0.173870956710042
+"27","Brazil Industrials and South Africa Resource","Bb6 Copula",1.39879813633788,1.8962684176873
+"28","Brazil Resources and China Financial","Tawn Type 2 Copula",1.37151348868282,0.314973262032086
+"29","Brazil Resources and China Industrial","Rotated Tawn Type 2 Copula (180 Degrees)",1.1567372311496,0.195317121651363
+"30","Brazil Resources and China Resource","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",1.392016477713,0.93993652679014
+"31","Brazil Resources and India Financial","Tawn Type 1 Copula",1.19720404673802,0.222148995939818
+"32","Brazil Resources and India Industrials","Rotated Tawn Type 2 Copula (90 Degrees)",-1.98793228971411,0.0475453099348763
+"33","Brazil Resources and India Resources","Rotated Clayton Copula (180 Degrees; “survival Clayton”)",0.107653983099264,0
+"34","Brazil Resources and Russia Financial","Bb8 Copula",1.90159357875404,0.706337663378875
+"35","Brazil Resources and Russia Industrial","Rotated Clayton Copula (90 Degrees)",-0.101241130792448,0
+"36","Brazil Resources and Russia Resources","Rotated Tawn Type 1 Copula (180 Degrees)",1.24159443613531,0.263647837655299
+"37","Brazil Resources and South Africa Financial","Rotated Tawn Type 2 Copula (90 Degrees)",-1.59644739735374,0.0523860680223423
+"38","Brazil Resources and South Africa Industrial","Rotated Joe Copula (90 Degrees)",-1.06490539652708,0
+"39","Brazil Resources and South Africa Resource","Tawn Type 2 Copula",2.70537996616643,0.746098878538686
+"40","China Financial and China Industrial","Student T Copula (t-copula)",-0.0044274396031921,20.7445878149392
+"41","China Financial and China Resource","Clayton Copula",0.0797529746545406,0
+"42","China Financial and India Financial","Rotated Tawn Type 1 Copula (270 Degrees)",-1.51877048002166,0.124034309184448
+"43","China Financial and India Industrials","Rotated Clayton Copula (90 Degrees)",-0.103351782917437,0
+"44","China Financial and India Resources","Rotated Tawn Type 1 Copula (270 Degrees)",-1.15573524480678,0.130271251416928
+"45","China Financial and Russia Financial","Frank Copula",0.618514188242032,0
+"46","China Financial and Russia Industrial","Student T Copula (t-copula)",0.00346361406887254,12.3062537834249
+"47","China Financial and Russia Resources","Rotated Joe Copula (270 Degrees)",-1.11610750511966,0
+"48","China Financial and South Africa Financial","Joe Copula",1.22496007084804,0
+"49","China Financial and South Africa Industrial","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",1.81707575992218,0.8594633744343
+"50","China Financial and South Africa Resource","Bb8 Copula",6,0.773267226828596
+"51","China Industrial and China Resource","Rotated Joe Copula (90 Degrees)",-1.05298669871697,0
+"52","China Industrial and India Financial","Clayton Copula",0.0886010982431586,0
+"53","China Industrial and India Industrials","Tawn Type 1 Copula",1.39846048907901,0.107031147959636
+"54","China Industrial and India Resources","Rotated Tawn Type 1 Copula (270 Degrees)",-2.02266771025063,0.0441677266064921
+"55","China Industrial and Russia Financial","Rotated Tawn Type 2 Copula (90 Degrees)",-2.9211040705691,0.00488499116671131
+"56","China Industrial and Russia Industrial","Rotated Bb8 Copula (90 Degrees)",-1.45631705900272,-0.759745442242538
+"57","China Industrial and Russia Resources","Rotated Joe Copula (90 Degrees)",-1.08759351719033,0
+"58","China Industrial and South Africa Financial","Rotated Tawn Type 2 Copula (270 Degrees)",-1.96619828723398,0.0987568604245991
+"59","China Industrial and South Africa Industrial","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",1.72994919791374,0.643943254347232
+"60","China Industrial and South Africa Resource","Frank Copula",5.63686007332671,0
+"61","China Resource and India Financial","Tawn Type 1 Copula",1.05899144886242,0.221987780619494
+"62","China Resource and India Industrials","Gaussian Copula",0.09577355242608,0
+"63","China Resource and India Resources","Clayton Copula",0.372059391973357,0
+"64","China Resource and Russia Financial","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",1.67973784793854,0.649367328197528
+"65","China Resource and Russia Industrial","Gaussian Copula",0.0606993981723636,0
+"66","China Resource and Russia Resources","Gaussian Copula",0.226415553733686,0
+"67","China Resource and South Africa Financial","Rotated Tawn Type 2 Copula (90 Degrees)",-1.48614577128836,0.141523974829776
+"68","China Resource and South Africa Industrial","Rotated Tawn Type 1 Copula (180 Degrees)",1.97177838245228,0.0877204129783379
+"69","China Resource and South Africa Resource","Bb7 Copula",1.87133251858877,0.0650540605717087
+"70","India Financial and India Industrials","Rotated Tawn Type 2 Copula (90 Degrees)",-1.58977213175491,0.0272253717328881
+"71","India Financial and India Resources","Rotated Clayton Copula (270 Degrees)",-0.147245520726149,0
+"72","India Financial and Russia Financial","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",1.16844429650181,0.995822144975944
+"73","India Financial and Russia Industrial","Tawn Type 2 Copula",1.27360599730542,0.0703392618114773
+"74","India Financial and Russia Resources","Rotated Bb7 Copula (180 Degrees; “survival Bb7”)",1.00288519000934,0.0852581625558404
+"75","India Financial and South Africa Financial","Rotated Tawn Type 2 Copula (180 Degrees)",1.79318060067505,0.0416502492905575
+"76","India Financial and South Africa Industrial","Bb6 Copula",1.12349047348181,1.09442056176823
+"77","India Financial and South Africa Resource","Bb7 Copula",1.95150637595684,0.337338084012647
+"78","India Industrials and India Resources","Frank Copula",-1.84451079406748,0
+"79","India Industrials and Russia Financial","Bb8 Copula",1.40647106863776,0.707622538612167
+"80","India Industrials and Russia Industrial","Bb8 Copula",1.26639209636785,0.948798479101109
+"81","India Industrials and Russia Resources","Rotated Tawn Type 1 Copula (180 Degrees)",1.11302752569194,0.186624259420377
+"82","India Industrials and South Africa Financial","Rotated Tawn Type 2 Copula (180 Degrees)",1.19396018345554,0.266804403821528
+"83","India Industrials and South Africa Industrial","Rotated Bb7 Copula (180 Degrees; “survival Bb7”)",1.16384663096291,0.405696112545831
+"84","India Industrials and South Africa Resource","Bb8 Copula",2.35683680701359,0.990033939744394
+"85","India Resources and Russia Financial","Rotated Joe Copula (270 Degrees)",-1.02361048003743,0
+"86","India Resources and Russia Industrial","Tawn Type 2 Copula",1.66665202039968,0.073479611866932
+"87","India Resources and Russia Resources","Bb8 Copula",1.79742566204219,0.60117192350926
+"88","India Resources and South Africa Financial","Rotated Tawn Type 2 Copula (180 Degrees)",1.29321862921099,0.0999158953398003
+"89","India Resources and South Africa Industrial","Rotated Tawn Type 2 Copula (180 Degrees)",1.90363761336867,0.0155130878477933
+"90","India Resources and South Africa Resource","Bb6 Copula",1.44075707373306,1.77848054152096
+"91","Russia Financial and Russia Industrial","Clayton Copula",0.171033093405841,0
+"92","Russia Financial and Russia Resources","Rotated Bb8 Copula (180 Degrees; “survival Bb8”)",1.25586457503695,0.787387132684777
+"93","Russia Financial and South Africa Financial","Tawn Type 2 Copula",1.71871267870467,0.0463590543074402
+"94","Russia Financial and South Africa Industrial","Gaussian Copula",0.315248076158075,0
+"95","Russia Financial and South Africa Resource","Bb1 Copula",0.0636979706511514,1.70824062949604
+"96","Russia Industrial and Russia Resources","Rotated Tawn Type 1 Copula (270 Degrees)",-2.22516064485153,0.0156541525863373
+"97","Russia Industrial and South Africa Financial","Joe Copula",1.06740369642442,0
+"98","Russia Industrial and South Africa Industrial","Rotated Tawn Type 1 Copula (180 Degrees)",1.27331310846413,0.140894328229586
+"99","Russia Industrial and South Africa Resource","Bb8 Copula",6,0.556421861024329
+"100","Russia Resources and South Africa Financial","Gaussian Copula",0.0890474920305963,0
+"101","Russia Resources and South Africa Industrial","Rotated Tawn Type 1 Copula (180 Degrees)",1.62991533252986,0.145392446991437
+"102","Russia Resources and South Africa Resource","Bb8 Copula",2.56589689966521,0.789180832221384
+"103","South Africa Financial and South Africa Industrial","Gaussian Copula",-0.159525752840484,0
+"104","South Africa Financial and South Africa Resource","Rotated Bb8 Copula (270 Degrees)",-6,-0.667780100633398
+"105","South Africa Industrial and South Africa Resource","Bb8 Copula",5.1253526078658,0.827900219367287

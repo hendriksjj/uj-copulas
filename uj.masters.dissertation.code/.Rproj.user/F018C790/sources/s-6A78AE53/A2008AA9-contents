@@ -7,6 +7,7 @@ library(MTS)
 library(psych)
 library(tseries)
 library(rugarch)
+library(VineCopula)
 
 ##### FUNCTIONS #####
 # Helper Functions for data
@@ -95,7 +96,7 @@ corr <- function(df_full){
 # Provides best ARMA(p_max, q_max)-GARCH(r_max, s_max) model specification for index y
 fun_garch_spec <- function(y, p_max, q_max, r_max, s_max){
   library(rugarch)
-  select_train <- 1:floor(0.75 * length(y))
+  select_train <- 1:floor(1 * length(y))
   select_test <- setdiff(1:length(y), select_train)
   y_train <- y[select_train]
   y_test <- y[select_test]
@@ -111,17 +112,17 @@ fun_garch_spec <- function(y, p_max, q_max, r_max, s_max){
       for(r in 1:r_max){
         for(s in 1:s_max){
           if(count == 1){
-            model_spec <- data.frame(ModelNum = count, ModelType = 'GARCH', AR = p,MA = q, G = r, ARCH = s, Model = "sGARCH", SubModel = 0, Dist = "std", MSE_in_Sample = 0, MSE_out_Sample = 0, solver = '', stringsAsFactors = FALSE)
+            model_spec <- data.frame(ModelNum = count, ModelType = 'GARCH', AR = p,MA = q, G = r, ARCH = s, Model = "sGARCH", SubModel = 0, Dist = "std", MSE_in_Sample = 0, MSE_out_Sample = 0, solver = '', stringsAsFactors = FALSE, bds_ts = 0, bds_p = 0)
           }
           
-          model_spec <- rbind(model_spec, list(count,'GARCH',p,q,r,s,"sGARCH", 0, "std", 0, 0, ''))
+          model_spec <- rbind(model_spec, list(count,'GARCH',p,q,r,s,"sGARCH", 0, "std", 0, 0, '', 0, 0))
           count = count + 1
         }
       }
     }
   }
   
-  
+  # sample(1:nrow(model_spec), nrow(model_spec))
   for(i in 1:nrow(model_spec)){
     
     print('----------------------------------------------------------')
@@ -146,23 +147,45 @@ fun_garch_spec <- function(y, p_max, q_max, r_max, s_max){
       
       
       if(!is.null(forc)){
-        forc_resid <- y_test - forc@forecast$seriesFor  
+        forc_resid <- y_test - forc@forecast$seriesFor
+        data_resid <- fit@fit$residuals
         if(i==1){
           resid_save = data.frame(forc_resid)
           rownames(resid_save) <- NULL
           colnames(resid_save) <- paste(i)
+          
+          actual_resid_save = data.frame(data_resid)
+          rownames(actual_resid_save) <- NULL
+          colnames(actual_resid_save) <- paste(i)
         } else {
           resid_save_temp <- data.frame(data.frame(forc_resid))
           rownames(resid_save_temp) <- NULL
           colnames(resid_save_temp) <- paste(i)
           resid_save <- cbind.data.frame(resid_save, resid_save_temp)
+          
+          actual_resid_save_temp <- data.frame(data.frame(data_resid))
+          rownames(actual_resid_save_temp) <- NULL
+          colnames(actual_resid_save_temp) <- paste(i)
+          actual_resid_save <- cbind.data.frame(actual_resid_save, actual_resid_save_temp)
         }
         model_spec[i, 'solver'] <- garch.solvers[attempt - 1]
         model_spec[i,'MSE_in_Sample'] <- sum(fit@fit$residuals * fit@fit$residuals)/length(fit@fit$residuals)
         model_spec[i,'MSE_out_Sample'] <- sum(forc_resid * forc_resid)/length(forc_resid)
+        sigma_square_std <- log(fit@fit$residuals ** 2)
+        
+        # copdata <- pobs(sigma_square_std)
+        
+        bds <- bds.test(sigma_square_std)
+        model_spec[i,'bds_ts']  <- bds$statistic[1]
+        model_spec[i,'bds_p']  <- bds$p.value[1]
+        if(bds$p.value[1] > 0.05){
+          i <- nrow(model_spec)
+        }
       } else {
         model_spec[i,'MSE_in_Sample'] <- NULL
         model_spec[i,'MSE_out_Sample'] <- NULL
+        model_spec[i,'bds_ts']  <- NULL
+        model_spec[i,'bds_p']  <- NULL
       }
       
       fit_save[i] <- fit
@@ -171,7 +194,12 @@ fun_garch_spec <- function(y, p_max, q_max, r_max, s_max){
   }
   
   # return(model_spec[order(model_spec$MSE_out_Sample),][1,])  
-  return(model_spec[order(model_spec$MSE_out_Sample),])  
+  if(max(model_spec$bds_p) > 0.05){
+    return(model_spec[order(model_spec$bds_p, decreasing=TRUE),])    
+  } else {
+    return(model_spec[order(model_spec$bds_ts, decreasing=FALSE),])    
+  }
+  
 }
 
 # Writes marginal_models.csv
@@ -186,10 +214,10 @@ model_output <- function(spec_save){
   country_sec$index <- spec_save$index
   
   df_return <- spec_save %>%
-    select(index, p = AR, q = MA, r = G, s = ARCH, `Out of sample MSE` = MSE_out_Sample) %>%
+    select(index, p = AR, q = MA, r = G, s = ARCH, `Out of sample MSE` = MSE_out_Sample, `BDS p-value`=bds_p) %>%
     mutate_if(is.numeric, round, 4) %>%
     inner_join(country_sec) %>%
-    select(Country, Sector, p, q, r, s, `Out of sample MSE`)
+    select(Country, Sector, p, q, r, s, `BDS p-value`)
   
   df_return$Country[duplicated(df_return$Country)] <- ''
   

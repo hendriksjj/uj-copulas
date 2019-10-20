@@ -4,16 +4,16 @@
     "created" : 1571039893849.000,
     "dirty" : false,
     "encoding" : "UTF-8",
-    "folds" : "12|26|16|0|\n17|31|32|0|\n",
-    "hash" : "3193564576",
+    "folds" : "13|26|17|0|\n18|31|33|0|\n36|36|75|0|\n78|26|93|0|\n",
+    "hash" : "0",
     "id" : "A2008AA9",
-    "lastKnownWriteTime" : 1571039619,
-    "last_content_update" : 1571039897401,
+    "lastKnownWriteTime" : 1571087120,
+    "last_content_update" : 1571087120344,
     "path" : "C:/Users/F5056756/Desktop/dissertation/uj-copulas/uj.masters.dissertation.code/filteredData.R",
     "project_path" : "filteredData.R",
     "properties" : {
-        "cursorPosition" : "71,43",
-        "scrollLine" : "61"
+        "cursorPosition" : "125,13",
+        "scrollLine" : "0"
     },
     "relative_order" : 2,
     "source_on_save" : false,
