@@ -76,18 +76,18 @@ write.csv(df_resid, 'FILTERED_DATA_RESID.csv')
 source('copulaFit.R')
 
 
-df_full <- read.csv('data//FILTERED_DATA.csv')
+df_copula_full <- read.csv('FILTERED_DATA.csv')
 # for robustness check
-# df_full <- df_full[df_full$X >= 1051,]
+# df_copula_full <- df_copula_full[df_copula_full$X >= 1051,]
 
-colnames(df_full) <- colnames(df_full) %>%
+colnames(df_copula_full) <- colnames(df_copula_full) %>%
   stringr::str_replace_all('_', ' ') %>%
   lapply(FUN = simpleCap) %>%
   unlist()
 
-indices <- colnames(df_full)[3:17]
+indices <- colnames(df_copula_full)[3:17]
 
-df_indices <- df_full[,indices]
+df_indices <- df_copula_full[,indices]
 
 df_indices_std <- scale(df_indices)
 
@@ -130,7 +130,7 @@ aggregated_results <- read.csv('finalResults//aggregated_results.csv')
 
 df_final <- df_return_from_agg(aggregated_results)
 
-write.csv(df_final, 'finalResults//Tail Dependence.csv')
+write.csv(df_final, 'finalResults//Tail Dependence 1 5 10.csv')
 
 
 options(warn = oldw)

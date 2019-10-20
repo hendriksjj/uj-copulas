@@ -1,16 +1,18 @@
-"","Country","Sector","p","q","r","s","BDS p-value"
-"1","Brazil","Financial",2,3,1,1,0.1549
-"2","","Industrial",2,3,2,2,0.1764
-"3","","Resource",3,2,2,1,0.1046
-"4","China","Financial",0,1,1,1,0.0521
-"5","","Industrial",1,2,2,2,0
-"6","","Resource",3,3,1,2,0.0021
-"7","India","Financial",3,2,1,2,0.6161
-"8","","Industrial",1,1,2,2,0
-"9","","Resource",0,0,1,1,0.0023
-"10","Russia","Financial",3,3,2,1,0
-"11","","Industrial",0,1,1,2,0.0031
-"12","","Resource",0,0,2,1,0.0003
-"13","South Africa","Financial",3,3,1,2,0.0007
-"14","","Industrial",2,3,2,1,0.0057
-"15","","Resource",1,2,1,1,0.0001
+,,,,,,,,,
+,,Country,Sector,p,q,r,s,BDS p-value,
+,,Brazil,Financial,2,3,1,1,0.1549,
+,,,Industrial,2,3,2,2,0.1764,
+,,,Resource,3,2,2,1,0.1046,
+,,China,Financial,0,1,1,1,0.0521,
+,,,Industrial,1,2,2,2,0.0753,
+,,,Resource,3,3,1,2,0.0951,
+,,India,Financial,3,2,1,2,0.6161,
+,,,Industrial,1,1,2,2,0.0030,
+,,,Resource,0,0,1,1,0.1053,
+,,Russia,Financial,3,3,2,1,0.0621,
+,,,Industrial,0,1,1,2,0.2031,
+,,,Resource,0,0,2,1,0.0003,
+,,South Africa,Financial,3,3,1,2,0.0007,
+,,,Industrial,2,3,2,1,0.0570,
+,,,Resource,1,2,1,1,0.1613,
+,,,,,,,,,

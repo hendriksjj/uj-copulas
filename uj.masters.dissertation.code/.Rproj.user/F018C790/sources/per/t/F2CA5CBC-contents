@@ -179,13 +179,13 @@ df_return_from_agg <- function(aggregated_results){
   agg_str <- aggregated_results %>%
     mutate(`Upper Tail 1` = as.character(round(U_TDC, 4))) %>%
     mutate(`Lower Tail 1` = as.character(round(L_TDC, 4))) %>%
-    mutate(`Upper Tail` = ifelse(U_TDC_sig_1, paste(`Upper Tail 1`, '*', sep = ''),
-                                 ifelse(U_TDC_sig_5, paste(`Upper Tail 1`, '', sep = ''),
-                                        ifelse(U_TDC_sig_10, paste(`Upper Tail 1`, '', sep = ''),
+    mutate(`Upper Tail` = ifelse(U_TDC_sig_1, paste(`Upper Tail 1`, '***', sep = ''),
+                                 ifelse(U_TDC_sig_5, paste(`Upper Tail 1`, '**', sep = ''),
+                                        ifelse(U_TDC_sig_10, paste(`Upper Tail 1`, '*', sep = ''),
                                                `Upper Tail 1`)))) %>%
-    mutate(`Lower Tail` = ifelse(L_TDC_sig_1, paste(`Lower Tail 1`, '*', sep = ''),
-                                 ifelse(L_TDC_sig_5, paste(`Lower Tail 1`, '', sep = ''),
-                                        ifelse(L_TDC_sig_10, paste(`Lower Tail 1`, '', sep = ''),
+    mutate(`Lower Tail` = ifelse(L_TDC_sig_1, paste(`Lower Tail 1`, '***', sep = ''),
+                                 ifelse(L_TDC_sig_5, paste(`Lower Tail 1`, '**', sep = ''),
+                                        ifelse(L_TDC_sig_10, paste(`Lower Tail 1`, '*', sep = ''),
                                                `Lower Tail 1`)))) %>%
     select(CountryGroup = Group.1, `Upper Tail`, `Lower Tail`)
   df_ret <- data.frame(matrix(data = '',nrow = 17, ncol = 17), stringsAsFactors = FALSE)

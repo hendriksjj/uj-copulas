@@ -130,7 +130,7 @@ aggregated_results <- read.csv('finalResults//aggregated_results.csv')
 
 df_final <- df_return_from_agg(aggregated_results)
 
-write.csv(df_final, 'finalResults//Tail Dependence.csv')
+write.csv(df_final, 'finalResults//Tail Dependence 1 5 10.csv')
 
 
 options(warn = oldw)
